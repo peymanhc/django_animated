@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  {% load static %}
+    <meta charset="utf-8" />
+    <title>Hamed Farzan Manesh</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/3f849d32bd.js" crossorigin="anonymous"></script> 
+
+ </head>
+
+  <body>
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div id="contacts" class="contacts" >
+        <div class="contacts_left" >
+            <p><i class="fas fa-map-marker-alt mx-2"></i>Malad West</p>
+            <ul class="socials" >
+              <li><i class="social_icon fab fa-facebook-f"></i></li>
+              <li><i class="social_icon fab fa-linkedin-in"></i></li>
+              <li><i class="social_icon fab fa-instagram"></i></li>
+              <li><i class="social_icon fab fa-twitter"></i></li>
+            </ul>
+        </div>
+          <p><i class="fas fa-envelope mx-2"></i>Peymanhc@gmail.com</p>
+    </div>
+      <div id="navbar_items" class="navbar_section">
+        <div style="width: 50%">
+          <img class="logo_img" src="{% static 'logo.webp' %}" />
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          style="width: 100%"
+          class="collapse navbar-collapse"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Videos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">contactus</a>
+            </li>
+          </ul>
+        </div>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Hi Hamed farzan manesh
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+      </div>
+    </nav>
+
+    <section class="section_container">
+      <div>{% block content %} {% endblock %}</div>
+    </section>
+  </body>
+  <script>
+  var myNav = document.getElementById('navbar');
+  var contacts = document.getElementById('contacts');
+  var navbarItems = document.getElementById('navbar_items');
+window.onscroll = function () { 
+    "use strict";
+    if (window.pageYOffset >= 100 ) {
+        myNav.classList.add("nav-colored");
+        myNav.classList.remove("nav-transparent");
+        contacts.classList.remove("contacts_block");
+        contacts.classList.add("contacts_hide");
+        navbarItems.classList.add("navbarItems1");
+        navbarItems.classList.remove("navbarItems2");
+    } 
+    else {
+        myNav.classList.add("nav-transparent");
+        myNav.classList.remove("nav-colored");
+        contacts.classList.add("contacts_block");
+        contacts.classList.remove("contacts_hide");
+        navbarItems.classList.remove("navbarItems1");
+        navbarItems.classList.add("navbarItems2");
+    }
+};
+console.log(window.pageYOffset)
+  </script>
+</html>

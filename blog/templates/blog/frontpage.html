@@ -1,0 +1,91 @@
+{% extends 'blog/base.html' %} {% block content %} {%load static %}
+<section class="home_header">
+  <div class="home_title">
+    <div class="home_title_text">
+      <h4 class="light_title">Offering All Kinds of</h4>
+      <h4 class="bold_title">FILM PRODUCTION SERVICES</h4>
+      <button class="home_Title_button">Enquire Now</button>
+    </div>
+  </div>
+</section>
+<section class="container">
+  <div id="Services">
+    <h3 class="sec_title">Services</h3>
+    <div>
+      <div class="row">
+        {% for post in posts %}
+        <div class="col-sm-3">
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="{% static 'home_header.webp' %}"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">{{ post.title }}</h5>
+              <p class="card-text">{{ post.intro }}</p>
+              <a class="readmore" href="{% url 'post_detail' post.slug %}"
+                >Read more</a
+              >
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div id="AboutUs">
+    <div class="row aboutus">
+      <div class="col-sm-6">
+        <img class="about_img" src="{% static 'aboutImg.webp' %}" />
+      </div>
+      <div class="col-sm-6">
+        <h3 class="sec_title">About Us</h3>
+        <p class="about_text">
+          The main objective of the company is to find intriguing stories,
+          develop them into scripts and finally transform them into an
+          unforgettable experience on the silver screen. We, Dreamy Productions
+          at Malad West in Mumbai, Maharashtra, represent a group of world-class
+          talent that excel in their diverse approaches. Our skilful and
+          committed production team strive to support these talented people to
+          get the best out of them and turn vision into reality. We help turn
+          dreams into reality by giving them the correct execution needed.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div id="Gallery" class="py-5">
+    <h3 class="sec_title mt-5">Gallery</h3>
+    <div class="row gallery">
+      <div class="col-sm-4">
+        <img class="gallery_post" src="{% static 'gallery_static.webp' %}" />
+      </div>
+      <div class="col-sm-4">
+        <img class="gallery_post" src="{% static 'gallery_static.webp' %}" />
+      </div>
+      <div class="col-sm-4">
+        <img class="gallery_post" src="{% static 'gallery_static.webp' %}" />
+      </div>
+    </div>
+  </div>
+  <div id="Videos" class="py-5">
+    <h3 class="sec_title mt-5">Videos</h3>
+    <div class="row Videos">
+      <div class="col-sm-6">
+        <video class="video" controls>
+          <source src="mov_bbb.mp4" type="video/mp4">
+          Your browser does not support HTML video.
+        </video>
+        <p class="videoTitle" >Tips for Shooting a Short Film</p>
+      </div>
+      <div class="col-sm-6">
+        <video class="video" controls>
+          <source src="mov_bbb.mp4" type="video/mp4">
+          Your browser does not support HTML video.
+        </video>
+        <p class="videoTitle">Tips for Shooting a Short Film</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
