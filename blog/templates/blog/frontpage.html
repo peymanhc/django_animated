@@ -10,9 +10,13 @@
 </section>
 <section class="container">
   <div id="Services">
-    <h3 class="sec_title">Services</h3>
+    <h3 data-aos="flip-left" class="sec_title">Services</h3>
     <div>
-      <div class="row">
+      <div
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+        class="row"
+      >
         {% for post in posts %}
         <div class="col-sm-3">
           <div class="card">
@@ -22,8 +26,8 @@
               alt="Card image cap"
             />
             <div class="card-body">
-              <h5 class="card-title">{{ post.title }}</h5>
-              <p class="card-text">{{ post.intro }}</p>
+              <h5 data-aos="fade-up" class="card-title">{{ post.title }}</h5>
+              <p data-aos="fade-up" class="card-text">{{ post.intro }}</p>
               <a class="readmore" href="{% url 'post_detail' post.slug %}"
                 >Read more</a
               >
@@ -34,58 +38,212 @@
       </div>
     </div>
   </div>
+  {% for about in abouts %}
   <div id="AboutUs">
     <div class="row aboutus">
-      <div class="col-sm-6">
+      <div data-aos="flip-right" class="col-sm-6">
         <img class="about_img" src="{% static 'aboutImg.webp' %}" />
       </div>
-      <div class="col-sm-6">
-        <h3 class="sec_title">About Us</h3>
-        <p class="about_text">
-          The main objective of the company is to find intriguing stories,
-          develop them into scripts and finally transform them into an
-          unforgettable experience on the silver screen. We, Dreamy Productions
-          at Malad West in Mumbai, Maharashtra, represent a group of world-class
-          talent that excel in their diverse approaches. Our skilful and
-          committed production team strive to support these talented people to
-          get the best out of them and turn vision into reality. We help turn
-          dreams into reality by giving them the correct execution needed.
-        </p>
+      <div data-aos="flip-left" class="col-sm-6">
+        <h3 class="sec_title">{{ about.title }}</h3>
+        <p class="about_text">{{ about.body }}</p>
       </div>
     </div>
   </div>
+  {% endfor %}
   <div id="Gallery" class="py-5">
-    <h3 class="sec_title mt-5">Gallery</h3>
+    <h3 data-aos="flip-left" class="sec_title mt-5">Gallery</h3>
     <div class="row gallery">
       <div class="col-sm-4">
-        <img class="gallery_post" src="{% static 'gallery_static.webp' %}" />
+        <img
+          data-aos="zoom-in-up"
+          class="gallery_post"
+          src="{% static 'gallery_static.webp' %}"
+        />
       </div>
       <div class="col-sm-4">
-        <img class="gallery_post" src="{% static 'gallery_static.webp' %}" />
+        <img
+          data-aos="zoom-in-up"
+          class="gallery_post"
+          src="{% static 'gallery_static.webp' %}"
+        />
       </div>
       <div class="col-sm-4">
-        <img class="gallery_post" src="{% static 'gallery_static.webp' %}" />
+        <img
+          data-aos="zoom-in-up"
+          class="gallery_post"
+          src="{% static 'gallery_static.webp' %}"
+        />
       </div>
     </div>
   </div>
   <div id="Videos" class="py-5">
-    <h3 class="sec_title mt-5">Videos</h3>
+    <h3 data-aos="flip-left" class="sec_title mt-5">Videos</h3>
     <div class="row Videos">
       <div class="col-sm-6">
         <video class="video" controls>
-          <source src="mov_bbb.mp4" type="video/mp4">
+          <source src="mov_bbb.mp4" type="video/mp4" />
           Your browser does not support HTML video.
         </video>
-        <p class="videoTitle" >Tips for Shooting a Short Film</p>
+        <p class="videoTitle">Tips for Shooting a Short Film</p>
       </div>
       <div class="col-sm-6">
         <video class="video" controls>
-          <source src="mov_bbb.mp4" type="video/mp4">
+          <source src="mov_bbb.mp4" type="video/mp4" />
           Your browser does not support HTML video.
         </video>
         <p class="videoTitle">Tips for Shooting a Short Film</p>
       </div>
     </div>
+  </div>
+  <div class="sliderRoot py-5">
+    <div class="row">
+      <div class="col-sm-4"></div>
+      <div class="col-sm-8">
+        <div class="top-content">
+          <div class="container-fluid">
+            <div
+              id="carousel-example"
+              class="carousel slide"
+              data-ride="carousel"
+            >
+              <div class="carousel-inner row w-100 mx-auto" role="listbox">
+                <div class="carousel-item col-12 col-sm-6 active">
+                  <h5 class="Team_name">Hamed Farzan Manesh</h5>
+                  <p class="Team_text">
+                    I often use their studio for post production works as they
+                    make the latest technology available to us.
+                  </p>
+                </div>
+                <div class="carousel-item col-12 col-sm-6">
+                  <h5 class="Team_name">Peyman Hadavi</h5>
+                  <p class="Team_text">
+                    I often use their studio for post production works as they
+                    make the latest technology available to us.
+                  </p>
+                </div>
+                <div class="carousel-item col-12 col-sm-6">
+                  <h5 class="Team_name">Mohammad Farzan Manesh</h5>
+                  <p class="Team_text">
+                    I often use their studio for post production works as they
+                    make the latest technology available to us.
+                  </p>
+                </div>
+                <div class="carousel-item col-12 col-sm-6">
+                  <h5 class="Team_name">Pejman Hadavi</h5>
+                  <p class="Team_text">
+                    I often use their studio for post production works as they
+                    make the latest technology available to us.
+                  </p>
+                </div>
+                <div class="carousel-item col-12 col-sm-6">
+                  <h5 class="Team_name">Hamed Farzan Manesh 2</h5>
+                  <p class="Team_text">
+                    I often use their studio for post production works as they
+                    make the latest technology available to us.
+                  </p>
+                </div>
+                <div class="carousel-item col-12 col-sm-6">
+                  <h5 class="Team_name">Peyman Hadavi 2</h5>
+                  <p class="Team_text">
+                    I often use their studio for post production works as they
+                    make the latest technology available to us.
+                  </p>
+                </div>
+              </div>
+              <a
+                class="carousel-control-prev"
+                href="#carousel-example"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#carousel-example"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="ContactUs">
+    <div class="test"></div>
+    <h3 data-aos="flip-left" class="sec_title mt-5">Contact Us</h3>
+    <div class="row ContactUs">
+      <div data-aos="fade-right" class="col-sm-6 col-xs-12">
+        <div class="contact_info">
+          <i class="contact_icon fas fa-map-marker-alt"></i>
+          <div class="contact_text">
+            <p class="contact_title">Our Office Address</p>
+            <span class="contact_body"
+              >Malad West, Mumbai, Maharashtra 400064</span
+            >
+          </div>
+        </div>
+        <div class="contact_info">
+          <i class="contact_icon fas fa-envelope"></i>
+          <div class="contact_text">
+            <p class="contact_title">General Enquiries</p>
+            <span class="contact_body">contact@mysites.com</span>
+          </div>
+        </div>
+        <div class="contact_info">
+          <i class="contact_icon fas fa-phone-alt"></i>
+          <div class="contact_text">
+            <p class="contact_title">Call Us</p>
+            <span class="contact_body">+989030525589</span>
+          </div>
+        </div>
+        <div class="contact_info">
+          <i class="contact_icon fas fa-clock"></i>
+          <div class="contact_text">
+            <p class="contact_title">Our Timing</p>
+            <span class="contact_body">Mon - Sun : 09:00 AM - 09:00 PM</span>
+          </div>
+        </div>
+      </div>
+      <div data-aos="fade-left" class="col-sm-6 col-xs-12">
+        <form class="contact_form">
+          <input class="contact_input" type="text" placeholder="Your Name" />
+          <input class="contact_input" type="text" placeholder="Your Email" />
+          <input
+            class="contact_input"
+            type="text"
+            placeholder="Your Contact No."
+          />
+          <textarea
+            class="contact_input contact_textarea"
+            type="text"
+            placeholder="Your Message"
+          ></textarea>
+          <button class="contact_submit">submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="responsive-map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2822.7806761080233!2d-93.29138368446431!3d44.96844997909819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b32b6ee2c87c91%3A0xc20dff2748d2bd92!2sWalker+Art+Center!5e0!3m2!1sen!2sus!4v1514524647889"
+      width="100%"
+      frameborder="0"
+      style="border: 0"
+      allowfullscreen
+    ></iframe>
   </div>
 </section>
 {% endblock %}
