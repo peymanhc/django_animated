@@ -575,9 +575,6 @@ textarea {
 }
 
 @media screen and (max-width: 600px) {
-  .contacts {
-    display: none;
-  }
   .light_title {
     font-size: 25px;
   }
@@ -595,6 +592,9 @@ textarea {
   }
 }
 @media screen and (max-width: 1000px) {
+  .contacts {
+    display: none;
+  }
   .light_title {
     font-size: 25px;
   }
@@ -614,6 +614,7 @@ textarea {
 }
 .card_detail{
   text-align: center;
+  width: 100%;  
 }
 .card-img{
   width: 100%;
