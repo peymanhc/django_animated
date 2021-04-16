@@ -75,6 +75,7 @@ li {
 .nav-colored {
   background-color: white !important;
   transition: 0.5s;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.8);
 }
 .nav-transparent {
   background-color: transparent;
@@ -278,7 +279,7 @@ li {
   width: 75% !important;
   overflow: hidden;
   height: 300px;
-}
+} 
 .teambox {
   width: 100%;
   height: 100%;

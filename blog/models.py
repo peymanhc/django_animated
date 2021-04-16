@@ -3,10 +3,18 @@ from django.db import models
 class Post(models.Model):
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=255)
+    image = models.FileField(null=True,blank=True,upload_to='')
     slug = models.SlugField()
     intro = models.TextField()
     body = models.TextField()
     date_added = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
+
+    def extension(self):
+        name, extension = os.path.splitext(self.file.name)
+        return extension
 
     class Meta:
         ordering = ['-date_added']
@@ -17,8 +25,26 @@ class About(models.Model):
     body = models.TextField()
     date_added = models.DateTimeField(auto_now_add=True)
     class Meta:
+        get_latest_by = ['title']
+
+ 
+class MyTeam(models.Model):
+    id = models.AutoField(primary_key=True)
+    image = models.FileField(null=True,blank=True,upload_to='')
+    title = models.CharField(max_length=255)
+    body = models.TextField()
+    date_added = models.DateTimeField(auto_now_add=True)
+    class Meta:
         ordering = ['-date_added']
 
+class Gallery(models.Model):
+    id = models.AutoField(primary_key=True)
+    image = models.FileField(null=True,blank=True,upload_to='')
+
+class Video(models.Model):
+    id = models.AutoField(primary_key=True)
+    video = models.FileField(null=True,blank=True,upload_to='')
+ 
 class Comment(models.Model):
     id = models.AutoField(primary_key=True)
     post = models.ForeignKey(Post, related_name='comments', on_delete=models.CASCADE)
@@ -29,12 +55,3 @@ class Comment(models.Model):
 
     class Meta:
         ordering = ['date_added']
-
-class TeamMember(models.Model):
-    id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=255)
-    description = models.TextField()
-    date_added = models.DateTimeField(auto_now_add=True)
-
-    class Meta:
-        ordering = ['date_added']  
