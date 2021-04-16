@@ -147,7 +147,7 @@
           <div class="contact_text">
             <p class="contact_title">Our Office Address</p>
             <span class="contact_body"
-              >Malad West, Mumbai, Maharashtra 400064</span
+              >Iran, Tehran, Jordan ,Nelson Mandela, Valiasr, Saeedi St</span
             >
           </div>
         </div>
@@ -174,22 +174,17 @@
         </div>
       </div>
       <div data-aos="fade-left" class="col-md-6 col-xs-12">
-        <form class="contact_form">
-          <input class="contact_input" type="text" placeholder="Your Name" />
-          <input class="contact_input" type="text" placeholder="Your Email" />
-          <input
-            class="contact_input"
-            type="text"
-            placeholder="Your Contact No."
-          />
-          <textarea
-            class="contact_input contact_textarea"
-            type="text"
-            placeholder="Your Message"
-          ></textarea>
-          <button class="contact_submit">submit</button>
+        <form class="contact_form" method="post" action="">
+        {% csrf_token %}
+          {{form}}
+          <input type="submit" class="contact_submit">
         </form>
       </div>
+      {% if messages %}
+        {% for message in messages %}
+            <p>{{ message }}</p>
+        {% endfor %}
+      {% endif %}
     </div>
   </div>
   <div class="responsive-map">

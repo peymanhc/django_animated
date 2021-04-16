@@ -50,8 +50,9 @@ class Comment(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=255)
     email = models.EmailField()
+    phone = models.CharField(max_length=255,default="")
     body = models.TextField()
     date_added = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        ordering = ['date_added']
+        ordering = ['date_added'] 

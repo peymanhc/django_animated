@@ -1,6 +1,7 @@
 body {
   font-family: unset;
   scroll-behavior: smooth;
+  overflow-x: hidden !important;
 }
 html {
   scroll-behavior: smooth;
@@ -526,17 +527,22 @@ li {
   font-weight: 700;
   color: rgba(0, 0, 0, 0.6);
 }
-.contact_input {
+input {
   width: 100%;
   padding: 10px;
   border: 1px solid rgba(204, 204, 204, 0.8);
   border-radius: 8px;
   margin: 10px 0;
 }
-.contact_textarea {
+textarea {
   height: 100px;
   min-height: 100px;
   max-height: 100px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(204, 204, 204, 0.8);
+  border-radius: 8px;
+  margin: 10px 0;
 }
 .contact_submit {
   position: relative;
