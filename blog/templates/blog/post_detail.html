@@ -1,49 +1,15 @@
-{% extends 'blog/base.html' %}
-
-{% block content %}
-    <h1 class="title">{{ post.title }}</h1>
-
-    <small>Posted at {{ post.date_added }}</small>
-
-    <p><strong>{{ post.intro }}</strong></p>
-
-    <p>{{ post.body }}</p>
-
-    <hr>
-
-    <h2 class="subtitle">Comments</h2>
-
-    {% for comment in post.comments.all %}
-        <article class="media">
-            <div class="media-content">
-                <div class="content">
-                    <p>
-                        <strong>{{ comment.name }}</strong> <small>{{ comment.date_added }}</small>
-                        <br>
-                        {{ comment.body }}
-                    </p>
-                </div>
-            </div>
-        </article>
-    {% empty %}
-        <div class="notification">
-            <p>No comments yet!</p>
-        </div>
-    {% endfor %}
-
-    <hr>
-
-    <h2 class="subtitle">Add comment</h2>
-
-    <form method="post" action=".">
-        {% csrf_token %}
-
-        {{ form.as_p }}
-
-        <div class="field">
-            <div class="control">
-                <button class="button is-success">Submit</button>
-            </div>
-        </div>
-    </form>
+{% extends 'blog/base.html' %} {% block content %}
+<div class="detail_section" >
+<div class="card_detail">
+  <img class="card-img" src={{ post.image.url }} alt="Card image cap">
+  <div class="card-body">
+    <h4 class="card-title font-weight-bold">{{ post.title }}</h4>
+    <p class="card-text">{{ post.intro }}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{ post.body }}</li>
+    <li style="color:#e6c61f" class="list-group-item  font-weight-bold">{{ post.date_added }}</li>
+  </ul>
+</div>
+</div>
 {% endblock %}

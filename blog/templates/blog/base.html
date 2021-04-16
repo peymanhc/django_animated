@@ -17,69 +17,77 @@
 
   <body>
     <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <div id="contacts" class="contacts" >
-        <div class="contacts_left" >
-            <p><i class="fas fa-map-marker-alt mx-2"></i>Tehran / Canada</p>
-            <ul class="socials" >
-              <li><a href="" ><i class="social_icon fab fa-instagram"></i></a></li>
-              <li><i class="social_icon fab fa-twitter"></i></li>
-            </ul>
-        </div>
-          <p><i class="fas fa-envelope mx-2"></i>FarzanjelvehStudio@gmail.com</p>
-    </div>
-      <div id="navbar_items" class="navbar_section">
-        <div style="width: 50%">
-          <img class="logo_img" src="{% static 'logo.webp' %}" />
-        </div>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div
-          style="width: 100%"
-          class="collapse navbar-collapse"
-          id="navbarSupportedContent"
-        >
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#"
-                >Home <span class="sr-only">(current)</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#Services">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#AboutUs">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#Gallery">Gallery</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#Videos">Videos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#OurTeam">Our Team</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#ContactUs">contactus</a>
-            </li>
-          </ul>
-        </div>
+      <div id="contacts" class="contacts" >
+          <div class="contacts_left" >
+              <p><i class="fas fa-map-marker-alt mx-2"></i>Tehran / Canada</p>
+              <ul class="socials" >
+                <li>
+                  <a target="_blank" href="https://instagram.com/hamedfarzanmanesh?igshid=1hv59dvhe0tcq" >
+                    <i class="social_icon fab fa-instagram"></i>
+                  </a>
+                </li>
+                <li><i class="social_icon fab fa-twitter"></i></li>
+              </ul>
+          </div>
+            <p><i class="fas fa-envelope mx-2"></i>FarzanjelvehStudio@gmail.com</p>
       </div>
+        <div id="navbar_items" class="navbar_section">
+          <div style="width: 50%">
+            <img class="logo_img" src="{% static 'logo.webp' %}" />
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            style="width: 100%"
+            class="collapse navbar-collapse"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="/"
+                  >Home <span class="sr-only">(current)</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/#Services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/#AboutUs">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/#Gallery">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/#Videos">Videos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/#OurTeam">Our Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/#ContactUs">contactus</a>
+              </li>
+            </ul>
+          </div>
+        </div>
     </nav>
 
     <section class="section_container">
       <div>{% block content %} {% endblock %}</div>
     </section>
+      <div class="text-center p-3">
+    © 2021 Copyright:
+    <a class="text-dark" href="https://Peymanhc@gmail.com/">Peymanhc@gmail.com</a>
+  </div>
   </body>
   <script>
   var myNav = document.getElementById('navbar');
