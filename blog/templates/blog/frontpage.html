@@ -54,50 +54,33 @@
   <div id="Gallery" class="py-5">
     <h3 data-aos="flip-left" class="sec_title mt-5">Gallery</h3>
     <div class="row gallery">
+      {% for gallery in gallerys %}
       <div class="col-sm-4">
         <img
           data-aos="zoom-in-up"
           class="gallery_post"
-          src="{% static 'gallery_static.webp' %}"
+          src={{ gallery.image.url }}
         />
       </div>
-      <div class="col-sm-4">
-        <img
-          data-aos="zoom-in-up"
-          class="gallery_post"
-          src="{% static 'gallery_static.webp' %}"
-        />
-      </div>
-      <div class="col-sm-4">
-        <img
-          data-aos="zoom-in-up"
-          class="gallery_post"
-          src="{% static 'gallery_static.webp' %}"
-        />
-      </div>
+        {% endfor %}
     </div>
   </div>
   <div id="Videos" class="py-5">
     <h3 data-aos="flip-left" class="sec_title mt-5">Videos</h3>
     <div class="row Videos">
+    {% for video in videos %}
       <div class="col-sm-6">
         <video class="video" controls>
-          <source src="{% static 'mov_test.mp4' %}" type="video/mp4" />
+          <source src={{ video.video.url }} type="video/mp4" />
           Your browser does not support HTML video.
         </video>
-        <p class="videoTitle">Tips for Shooting a Short Film</p>
+        <p class="videoTitle">{{ video.title }}</p>
       </div>
-      <div class="col-sm-6">
-        <video class="video" controls>
-          <source src="{% static 'mov_test.mp4' %}" type="video/mp4" />
-          Your browser does not support HTML video.
-        </video>
-        <p class="videoTitle">Tips for Shooting a Short Film</p>
-      </div>
+      {% endfor %}
     </div>
   </div>
   <div id="OurTeam" class="sliderRoot py-5">
-    <div class="row">
+    <div class="row w-100">
       <div class="col-sm-12 col-md-4"></div>
       <div class="col-sm-12 col-md-8">
         <div class="top-content">
@@ -108,71 +91,21 @@
               data-ride="carousel"
             >
               <div class="carousel-inner row w-100 mx-auto" role="listbox">
-                <div class="carousel-item col-12 col-md-6 active">
+               {% for myteam in myteams %}
+                <div class="carousel-item col-12 col-md-6 {% cycle '' 'active' %}">
                   <div class="teambox">
                     <img
                       class="teamimg"
                       alt="gallery"
-                      src="{% static 'gallery_static.webp' %}"
+                      src={{ myteam.image.url }}
                     />
-                    <h5 class="Team_name">Peyman Hadavi Manesh</h5>
+                    <h5 class="Team_name">{{ myteam.title }}</h5>
                     <p class="Team_text">
-                      I often use their studio for post production works as they
-                      make the latest technology available to us.
+                     {{ myteam.body }}
                     </p>
                   </div>
                 </div>
-                <div class="carousel-item col-12 col-md-6">
-                  <div class="teambox">
-                    <img
-                      class="teamimg"
-                      alt="gallery"
-                      src="{% static 'gallery_static.webp' %}"
-                    />
-                    <h5 class="Team_name">Hamed Manesh</h5>
-                    <p class="Team_text">
-                      Hadavi make the latest technology available to us.
-                    </p>
-                  </div>
-                </div>
-                <div class="carousel-item col-12 col-md-6">
-                  <div class="teambox">
-                    <img
-                      class="teamimg"
-                      alt="gallery"
-                      src="{% static 'gallery_static.webp' %}"
-                    />
-                    <h5 class="Team_name">Hadavi Manesh</h5>
-                    <p class="Team_text">
-                      I often use their studio for post production works as they
-                      make the latest technology available to us.
-                    </p>
-                  </div>
-                </div>
-                <div class="carousel-item col-12 col-md-6">
-                  <div class="teambox">
-                    <img
-                      class="teamimg"
-                      alt="gallery"
-                      src="{% static 'gallery_static.webp' %}"
-                    />
-                    <h5 class="Team_name">Farzan</h5>
-                    <p class="Team_text">I often use t Hadavi</p>
-                  </div>
-                </div>
-                <div class="carousel-item col-12 col-md-6">
-                  <div class="teambox">
-                    <img
-                      class="teamimg"
-                      alt="gallery"
-                      src="{% static 'gallery_static.webp' %}"
-                    />
-                    <h5 class="Team_name">Peyman Hadavi</h5>
-                    <p class="Team_text">
-                      I often use their studio for post production works as they
-                    </p>
-                  </div>
-                </div>
+                {% endfor %}
               </div>
               <a
                 class="carousel-control-prev"

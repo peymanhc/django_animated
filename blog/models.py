@@ -43,6 +43,7 @@ class Gallery(models.Model):
 
 class Video(models.Model):
     id = models.AutoField(primary_key=True)
+    title = models.CharField(max_length=255,default="Video")
     video = models.FileField(null=True,blank=True,upload_to='')
  
 class Comment(models.Model):

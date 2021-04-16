@@ -10,14 +10,14 @@ from .models import Video
 def frontpage(request):
     posts = Post.objects.all()
     abouts = About.objects.all()
-    myteam = MyTeam.objects.all()
-    gallery = Gallery.objects.all()
+    myteams = MyTeam.objects.all()
+    gallerys = Gallery.objects.all()
     videos = Video.objects.all()
     return render(request, 'blog/frontpage.html', {
         'posts': posts,
         'abouts':abouts,
-        'myteam':myteam,
-        'gallery':gallery,
+        'myteams':myteams,
+        'gallerys':gallerys,
         'videos':videos,
         })
  
