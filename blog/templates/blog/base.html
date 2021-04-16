@@ -2,32 +2,30 @@
 <html>
   {% load static %}
     <meta charset="utf-8" />
-    <title>Hamed Farzan Manesh</title>
+    <title>Farzan jelveh</title>
     <link
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      href="{% static 'libraries/bootstrap.min.css' %}"
     />
     <link rel="stylesheet" href="{% static 'styles.css' %}" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/3f849d32bd.js" crossorigin="anonymous"></script> 
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="{% static 'libraries/jquery.min.js' %}"></script>
+    <script src="{% static 'libraries/popper.min.js' %}"></script>
+    <script src="{% static 'libraries/bootstrap.min.js' %}"></script>
+    <script src="{% static 'libraries/fontawesome.js' %}" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'libraries/aos.css' %}" />
  </head>
 
   <body>
     <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div id="contacts" class="contacts" >
         <div class="contacts_left" >
-            <p><i class="fas fa-map-marker-alt mx-2"></i>Malad West</p>
+            <p><i class="fas fa-map-marker-alt mx-2"></i>Tehran / Canada</p>
             <ul class="socials" >
-              <li><i class="social_icon fab fa-facebook-f"></i></li>
-              <li><i class="social_icon fab fa-linkedin-in"></i></li>
-              <li><i class="social_icon fab fa-instagram"></i></li>
+              <li><a href="" ><i class="social_icon fab fa-instagram"></i></a></li>
               <li><i class="social_icon fab fa-twitter"></i></li>
             </ul>
         </div>
-          <p><i class="fas fa-envelope mx-2"></i>Peymanhc@gmail.com</p>
+          <p><i class="fas fa-envelope mx-2"></i>FarzanjelvehStudio@gmail.com</p>
     </div>
       <div id="navbar_items" class="navbar_section">
         <div style="width: 50%">
@@ -57,41 +55,25 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
+              <a class="nav-link" href="#Services">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About Us</a>
+              <a class="nav-link" href="#AboutUs">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Gallery</a>
+              <a class="nav-link" href="#Gallery">Gallery</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Videos</a>
+              <a class="nav-link" href="#Videos">Videos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Testimonials</a>
+              <a class="nav-link" href="#OurTeam">Our Team</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">contactus</a>
+              <a class="nav-link" href="#ContactUs">contactus</a>
             </li>
           </ul>
         </div>
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="navbarDropdown"
-            role="button"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            Hamed farzan manesh
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/admin">Admin</a>
-          </div>
-        </li>
       </div>
     </nav>
 

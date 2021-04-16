@@ -18,7 +18,7 @@
         class="row"
       >
         {% for post in posts %}
-        <div class="col-sm-3">
+        <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="card">
             <img
               class="card-img-top"
@@ -82,24 +82,24 @@
     <div class="row Videos">
       <div class="col-sm-6">
         <video class="video" controls>
-          <source src="mov_bbb.mp4" type="video/mp4" />
+          <source src="{% static 'mov_test.mp4' %}" type="video/mp4" />
           Your browser does not support HTML video.
         </video>
         <p class="videoTitle">Tips for Shooting a Short Film</p>
       </div>
       <div class="col-sm-6">
         <video class="video" controls>
-          <source src="mov_bbb.mp4" type="video/mp4" />
+          <source src="{% static 'mov_test.mp4' %}" type="video/mp4" />
           Your browser does not support HTML video.
         </video>
         <p class="videoTitle">Tips for Shooting a Short Film</p>
       </div>
     </div>
   </div>
-  <div class="sliderRoot py-5">
+  <div id="OurTeam" class="sliderRoot py-5">
     <div class="row">
-      <div class="col-sm-4"></div>
-      <div class="col-sm-8">
+      <div class="col-sm-12 col-md-4"></div>
+      <div class="col-sm-12 col-md-8">
         <div class="top-content">
           <div class="container-fluid">
             <div
@@ -108,47 +108,74 @@
               data-ride="carousel"
             >
               <div class="carousel-inner row w-100 mx-auto" role="listbox">
-                <div class="carousel-item col-12 col-sm-6 active">
-                  <h5 class="Team_name">Hamed Farzan Manesh</h5>
-                  <p class="Team_text">
-                    I often use their studio for post production works as they
-                    make the latest technology available to us.
-                  </p>
+                <div class="carousel-item col-12 col-md-6 active">
+                  <div class="teambox" >
+                    <img
+                      class="teamimg"
+                      alt="gallery"
+                      src="{% static 'gallery_static.webp' %}"
+                    />
+                    <h5 class="Team_name">Peyman Hadavi Manesh</h5>
+                    <p class="Team_text">
+                      I often use their studio for post production works as they
+                      make the latest technology available to us.
+                    </p>
+                  </div>
                 </div>
-                <div class="carousel-item col-12 col-sm-6">
-                  <h5 class="Team_name">Peyman Hadavi</h5>
-                  <p class="Team_text">
-                    I often use their studio for post production works as they
-                    make the latest technology available to us.
-                  </p>
+               <div class="carousel-item col-12 col-md-6">
+                  <div class="teambox" >
+                    <img
+                      class="teamimg"
+                      alt="gallery"
+                      src="{% static 'gallery_static.webp' %}"
+                    />
+                    <h5 class="Team_name">Hamed Manesh</h5>
+                    <p class="Team_text">
+                     Hadavi
+                      make the latest technology available to us.
+                    </p>
+                  </div>
                 </div>
-                <div class="carousel-item col-12 col-sm-6">
-                  <h5 class="Team_name">Mohammad Farzan Manesh</h5>
-                  <p class="Team_text">
-                    I often use their studio for post production works as they
-                    make the latest technology available to us.
-                  </p>
+                <div class="carousel-item col-12 col-md-6">
+                  <div class="teambox" >
+                    <img
+                      class="teamimg"
+                      alt="gallery"
+                      src="{% static 'gallery_static.webp' %}"
+                    />
+                    <h5 class="Team_name">Hadavi  Manesh</h5>
+                    <p class="Team_text">
+                      I often use their studio for post production works as they
+                      make the latest technology available to us.
+                    </p>
+                  </div>
                 </div>
-                <div class="carousel-item col-12 col-sm-6">
-                  <h5 class="Team_name">Pejman Hadavi</h5>
-                  <p class="Team_text">
-                    I often use their studio for post production works as they
-                    make the latest technology available to us.
-                  </p>
+                <div class="carousel-item col-12 col-md-6">
+                  <div class="teambox" >
+                    <img
+                      class="teamimg"
+                      alt="gallery"
+                      src="{% static 'gallery_static.webp' %}"
+                    />
+                    <h5 class="Team_name"> Farzan </h5>
+                    <p class="Team_text">
+                      I often use t Hadavi
+                    </p>
+                  </div>
                 </div>
-                <div class="carousel-item col-12 col-sm-6">
-                  <h5 class="Team_name">Hamed Farzan Manesh 2</h5>
-                  <p class="Team_text">
-                    I often use their studio for post production works as they
-                    make the latest technology available to us.
-                  </p>
-                </div>
-                <div class="carousel-item col-12 col-sm-6">
-                  <h5 class="Team_name">Peyman Hadavi 2</h5>
-                  <p class="Team_text">
-                    I often use their studio for post production works as they
-                    make the latest technology available to us.
-                  </p>
+                <div class="carousel-item col-12 col-md-6">
+                  <div class="teambox" >
+                    <img
+                      class="teamimg"
+                      alt="gallery"
+                      src="{% static 'gallery_static.webp' %}"
+                    />
+                    <h5 class="Team_name">Peyman Hadavi</h5>
+                    <p class="Team_text">
+                      I often use their studio for post production works as they
+                      
+                    </p>
+                  </div>
                 </div>
               </div>
               <a
@@ -185,7 +212,7 @@
     <div class="test"></div>
     <h3 data-aos="flip-left" class="sec_title mt-5">Contact Us</h3>
     <div class="row ContactUs">
-      <div data-aos="fade-right" class="col-sm-6 col-xs-12">
+      <div data-aos="fade-right" class="col-md-6 col-xs-12">
         <div class="contact_info">
           <i class="contact_icon fas fa-map-marker-alt"></i>
           <div class="contact_text">
@@ -199,25 +226,25 @@
           <i class="contact_icon fas fa-envelope"></i>
           <div class="contact_text">
             <p class="contact_title">General Enquiries</p>
-            <span class="contact_body">contact@mysites.com</span>
+            <span class="contact_body">FarzanjelvehStudio@gmail.com</span>
           </div>
         </div>
         <div class="contact_info">
           <i class="contact_icon fas fa-phone-alt"></i>
           <div class="contact_text">
             <p class="contact_title">Call Us</p>
-            <span class="contact_body">+989030525589</span>
+            <span class="contact_body">+989120213558</span>
           </div>
         </div>
         <div class="contact_info">
           <i class="contact_icon fas fa-clock"></i>
           <div class="contact_text">
             <p class="contact_title">Our Timing</p>
-            <span class="contact_body">Mon - Sun : 09:00 AM - 09:00 PM</span>
+            <span class="contact_body">09:00 AM - 09:00 PM</span>
           </div>
         </div>
       </div>
-      <div data-aos="fade-left" class="col-sm-6 col-xs-12">
+      <div data-aos="fade-left" class="col-md-6 col-xs-12">
         <form class="contact_form">
           <input class="contact_input" type="text" placeholder="Your Name" />
           <input class="contact_input" type="text" placeholder="Your Email" />
@@ -237,13 +264,26 @@
     </div>
   </div>
   <div class="responsive-map">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2822.7806761080233!2d-93.29138368446431!3d44.96844997909819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b32b6ee2c87c91%3A0xc20dff2748d2bd92!2sWalker+Art+Center!5e0!3m2!1sen!2sus!4v1514524647889"
-      width="100%"
-      frameborder="0"
-      style="border: 0"
-      allowfullscreen
-    ></iframe>
+    <div class="mapouter">
+      <div class="gmap_canvas">
+        <div class="mapouter">
+          <div class="gmap_canvas">
+            <iframe
+              width="718"
+              height="500"
+              id="gmap_canvas"
+              src="https://maps.google.com/maps?q=%D8%A7%D8%B3%D8%AA%D8%A7%D9%86%20%D8%AA%D9%87%D8%B1%D8%A7%D9%86%20%D8%AA%D9%87%D8%B1%D8%A7%D9%86%20%D9%85%D9%86%D8%B7%D9%82%D9%87%20%DB%B3%20%D8%AE%DB%8C%D8%A7%D8%A8%D8%A7%D9%86%20%D9%88%D9%84%DB%8C%D8%B9%D8%B5%D8%B1%D8%8C,%20%D8%AE%DB%8C%D8%A7%D8%A8%D8%A7%D9%86%20%D8%B3%D8%B9%DB%8C%D8%AF%DB%8C&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+            ></iframe
+            ><br />
+          </div>
+        </div>
+        <br />
+      </div>
+    </div>
   </div>
 </section>
 {% endblock %}

@@ -3,11 +3,13 @@ from django.shortcuts import render, redirect
 from .forms import CommentForm
 from .models import Post
 from .models import About
+from .models import TeamMember
 
 def frontpage(request):
     posts = Post.objects.all()
     abouts = About.objects.all()
-    return render(request, 'blog/frontpage.html', {'posts': posts,'abouts':abouts})
+    team = TeamMember.objects.all()
+    return render(request, 'blog/frontpage.html', {'posts': posts,'abouts':abouts,'team':team})
 
 def post_detail(request, slug):
     post = Post.objects.get(slug=slug)

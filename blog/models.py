@@ -29,3 +29,12 @@ class Comment(models.Model):
 
     class Meta:
         ordering = ['date_added']
+
+class TeamMember(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=255)
+    description = models.TextField()
+    date_added = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['date_added']  
